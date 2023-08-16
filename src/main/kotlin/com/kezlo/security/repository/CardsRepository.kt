@@ -1,4 +1,12 @@
 package com.kezlo.security.repository;
 
-interface CardsRepository: org.springframework.data.jpa.repository.JpaRepository<com.kezlo.security.entity.Cards, kotlin.Int> {
+import com.kezlo.security.entity.Cards
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+
+
+@Repository
+interface CardsRepository : JpaRepository<Cards, Int> {
+
+    fun findByCustomerId(customerId: Int): List<Cards?>?
 }

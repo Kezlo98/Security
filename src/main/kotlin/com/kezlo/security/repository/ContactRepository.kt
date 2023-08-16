@@ -1,4 +1,9 @@
 package com.kezlo.security.repository;
 
-interface ContactRepository: org.springframework.data.jpa.repository.JpaRepository<com.kezlo.security.entity.Contact, kotlin.String> {
+import com.kezlo.security.entity.Contact
+import org.springframework.data.jpa.repository.JpaRepository
+import org.springframework.stereotype.Repository
+
+@Repository
+interface ContactRepository : JpaRepository<Contact, String> {
 }
