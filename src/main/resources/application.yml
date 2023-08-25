@@ -8,5 +8,19 @@ spring:
     properties:
       hibernate:
         format_sql: true
-    hibernate:
-      ddl-auto: update
+
+app:
+  oauth2:
+    google:
+      client:
+        id: 450982459846-die6mu5a8nn7d0go8c4invio7l3a5puu.apps.googleusercontent.com
+        secret: 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
+      link:
+        get_token: https://oauth2.googleapis.com/token
+        get_user_info: https://www.googleapis.com/oauth2/v1/userinfo?access_token=
+        verify_token: https://oauth2.googleapis.com/tokeninfo?id_token=
+      redirect_url: http://localhost:8080/login/oauth2/code/GOOGLE
+
+#logging:
+#  level:
+#    root: debug

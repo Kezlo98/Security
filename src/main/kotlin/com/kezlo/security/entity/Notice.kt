@@ -5,7 +5,7 @@ import org.hibernate.annotations.GenericGenerator
 import java.util.*
 
 @Entity
-@Table(name = "loans")
+@Table(name = "notice_details")
 data class Notice(
     @Id @GeneratedValue(strategy = GenerationType.AUTO, generator = "native") @GenericGenerator(
         name = "native",
